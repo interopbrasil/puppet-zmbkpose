@@ -36,23 +36,31 @@
 # Copyright 2016 Your name here, unless otherwise noted.
 #
 class zmbkpose (
-
-	$dirconf = $::zmbkpose::params::dirconf,
-	$workdir = $::zmbkpose::params::workdir,
-	$dirlog = $::zmbkpose::params::dirlog,
-        $crondir = $::zmbkpose::params::crondir,
-        $cronconf = $::zmbkpose::params::cronconf,
-        $useradmin = $::zmbkpose::params::useradmin,
-        $pwdadmin = $::zmbkpose::params::pwdadmin,
-        $binzmbkpose = $::zmbkpose::params::binzmbkpose,
-        $confzmbkpose = $::zmbkpose::params::confzmbkpose,
-	
-
-) inherits zmbkpose::params {
-
-	class { 'zmbkpose::user': } ->
-	class { 'zmbkpose::dir': } ->
-	class { 'zmbkpose::conf': } ->
-	class { 'zmbkpose::cron': }
+  $dirconf              = $::zmbkpose::params::dirconf,
+  $workdir              = $::zmbkpose::params::workdir,
+  $dirlog               = $::zmbkpose::params::dirlog,
+  $crondir              = $::zmbkpose::params::crondir,
+  $cronconf             = $::zmbkpose::params::cronconf,
+  $useradmin            = $::zmbkpose::params::useradmin,
+  $pwdadmin             = $::zmbkpose::params::pwdadmin,
+  $binzmbkpose          = $::zmbkpose::params::binzmbkpose,
+  $confzmbkpose         = $::zmbkpose::params::confzmbkpose,
+  $adminuser            = $::zmbkpose::params::adminuser,
+  $adminpass            = $::zmbkpose::params::adminpass,
+  $ldapmasterserver     = $::zmbkpose::params::ldapmasterserver,
+  $ldapzimbradn         = $::zmbkpose::params::ldapzimbradn,
+  $ldapzimbrapass       = $::zmbkpose::params::ldapzimbrapass,
+  $email_notify         = $::zmbkpose::params::email_notify,
+  $parallel_support     = $::zmbkpose::params::parallel_support,
+  $max_parallel_process = $::zmbkpose::params::max_parallel_process,
+  $removeBackupDias     = $::zmbkpose::params::removeBackupDias,
+  # Cron
+  $backupFull           = $::zmbkpose::params::backupFull,
+  $backupIncr           = $::zmbkpose::params::backupIncr,
+  $backupRemove         = $::zmbkpose::params::backupRemove,) inherits zmbkpose::params {
+  class { 'zmbkpose::user': } ->
+  class { 'zmbkpose::dir': } ->
+  class { 'zmbkpose::conf': } ->
+  class { 'zmbkpose::cron': }
 
 }
