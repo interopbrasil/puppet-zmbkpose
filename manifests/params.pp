@@ -20,25 +20,25 @@ class zmbkpose::params {
 
   # Cron
   $backupFull = {
-    'min'      => '3',
+    'min'      => '56',
     'hora'     => '2',
-    'monthday' => '1',
-    'month'    => '2',
-    'weekday'  => '2'
+    'monthday' => '*',
+    'month'    => '*',
+    'weekday'  => '6'
   }
   $backupIncr = {
-    'min'      => '3',
+    'min'      => '30',
     'hora'     => '2',
-    'monthday' => '1',
-    'month'    => '2',
-    'weekday'  => '2'
+    'monthday' => '*',
+    'month'    => '*',
+    'weekday'  => '0-5'
   }
   $backupRemove = {
-    'min'      => '3',
-    'hora'     => '2',
-    'monthday' => '1',
-    'month'    => '2',
-    'weekday'  => '2'
+    'min'      => '30',
+    'hora'     => '1',
+    'monthday' => '*',
+    'month'    => '*',
+    'weekday'  => '0'
   }
 
   # Different path and package definitions
