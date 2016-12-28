@@ -1,6 +1,6 @@
 {
 	"name": "interop-zmbkpose",
-	"version": "1.1.4",
+	"version": "1.1.5",
 	"author": "interop",
 	"summary": "Backup zimbra.",
 	"source": "git://github.com/interopbrasil/puppet-zmbkpose.git",
@@ -31,5 +31,11 @@
 			]
 		}
 	],
+	"requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 3.0.0 < 5.0.0"
+    }
+],
 	"description": "Backup zimbra via zmbkpose"
 }
