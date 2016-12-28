@@ -7,7 +7,7 @@
 <%= @cronbackupincr %> <%= @binzmbkpose %> -i >> <%= @logfile %> 2>&1
 
 ##Apagar Backup Antigo
-<%= @cronremovebackup %> <%= @binzmbkpose %> -d 1 weeks >> <%= @logfile %> 2>&1
+<%= @cronremovebackup %> <%= @binzmbkpose %> -d <%= @binzmbkpose %> >> <%= @logfile %> 2>&1
 
 # BACKUP BEGIN
 # BACKUP END

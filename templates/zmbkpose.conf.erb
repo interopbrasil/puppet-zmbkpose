@@ -6,12 +6,12 @@
 
 # TODO: PORTA=[HTTP|HTTPS|ADMIN|OUTRA]
 
-BACKUPUSER=<%= @backupuser %>
+BACKUPUSER='<%= @backupuser %>'
 
 # Working directory where temporary and definitive sessions will be created, containing users's content and attributes
 # # Sensitive content. Directory *must* have restricted access to BACKUPUSER
 
-WORKDIR=<%= @workdir %>
+WORKDIR='<%= @workdir %>'
 
 # Mailbox Serve Name or IP address
 # This value will be get by zimbraMailHost attribute of each account, providing mailboxes in a distributed deployment
@@ -23,12 +23,12 @@ WORKDIR=<%= @workdir %>
 #       # zmprov ca novoadmin@exemplo.com "senha"
 #       # zmprov ma novoadmin@exemplo.com zimbraIsAdminAccount TRUE
 
-ADMINUSER=<%= @adminuser %>
+ADMINUSER='<%= @adminuser %>'
 
 # Deve ser preenchido com a senha do usuario administrador definido em ADMINUSER
 # Must be filled with the User Global Administrator's password defined in ADMINUSER
 
-ADMINPASS=<%= @adminpass %>
+ADMINPASS='<%= @adminpass %>'
 
 # Must be filled with URL of LDAP MASTER
 
@@ -38,20 +38,20 @@ LDAPMASTERSERVER=ldap://<%= @ldapmasterserver %>:389
 # TIP: To get this value, execute on Zimbra Server
 #       # zmlocalconfig zimbra_ldap_userdn
 
-LDAPZIMBRADN=<%= @ldapzimbradn %>
+LDAPZIMBRADN='<%= @ldapzimbradn %>'
 
 # Must be filled with zimbra_ldap_password key value
 # TIP: To get this value, execute on Zimbra Server
 #       # zmlocalconfig -s zimbra_ldap_password
 
-LDAPZIMBRAPASS=<%= @ldapzimbrapass %>
+LDAPZIMBRAPASS='<%= @ldapzimbrapass %>'
 
 # Path to backup and restore log file
 
-LOGFILE=<%= @logfile %>
+LOGFILE='<%= @logfile %>'
 
 #Email address to send notification when completes backup.
-EMAIL_NOTIFY=<%= @email_notify %>
+EMAIL_NOTIFY='<%= @email_notify %>'
 
 # Support to parallel accounts backup
 #PARALLEL_SUPPORT - 0 = Off 1 = On
