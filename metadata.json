@@ -1,0 +1,17 @@
+{
+  "name": "interop-zmbkpose",
+  "version": "1.1.1",
+  "author": "interop",
+  "summary": "Backup zimbra.",
+  "source": "http://git.interop.com.br/Interop/interop-zmbkpose",
+  "license": "Apache 2.0",
+  "source": "",
+  "project_page": null,
+  "issues_url": null,
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_range": ">= 1.0.0"
+    }
+  ]
+}

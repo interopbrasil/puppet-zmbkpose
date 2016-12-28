@@ -1,0 +1,20 @@
+{
+  "README.md": "34b66ad3c981af9a8d6e5997cd98d4c3",
+  "Rakefile": "20b80e526e351a74df2001f504e756d2",
+  "files/zmbkpose-master/COPYING": "8f0e2cd40e05189ec81232da84bd6e1a",
+  "files/zmbkpose-master/INSTALL": "277f8b4316451ae83e717587d8b5467f",
+  "files/zmbkpose-master/README": "f18030c0e02f5119365eef015976cbcd",
+  "files/zmbkpose-master/changelog": "634dd64caf82bf14f945b78c2d83ee5b",
+  "files/zmbkpose-master/etc/zmbkpose.conf": "9a1ab2c30b0d0b304d2a2bd18410c198",
+  "files/zmbkpose-master/install.sh": "42d2ad576944bfaa9363b0c785d0df65",
+  "files/zmbkpose-master/src/zmbkpose": "c92320e4e3c3e271a872a60431df46cc",
+  "manifests/conf.pp": "f7286ac27ca799c837d49657d57c2ba8",
+  "manifests/dir.pp": "a3798283889fe2fef4321440aa0b1641",
+  "manifests/init.pp": "df509c0766fdbe60d9a38d1470117df5",
+  "manifests/params.pp": "192606034e3973a788f091d33c8d60c3",
+  "metadata.json": "98442206971355b92b62c960bae3bfd3",
+  "spec/classes/init_spec.rb": "12ca1a759ac47bb2d17d5958363759df",
+  "spec/spec_helper.rb": "a55d1e6483344f8ec6963fcb2c220372",
+  "templates/zmbkpose.conf": "bf9a42f25cc84475b21eb0d342116e2c",
+  "tests/init.pp": "36f0a19b2c62b701cf7b6d30d3339f1e"
+}
