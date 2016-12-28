@@ -3,7 +3,7 @@
   "version": "1.1.1",
   "author": "interop",
   "summary": "Backup zimbra.",
-  "source": "http://git.interop.com.br/Interop/interop-zmbkpose",
+  "source": "https://github.com/interopbrasil/puppet-zmbkpose",
   "license": "Apache 2.0",
   "source": "",
   "project_page": null,

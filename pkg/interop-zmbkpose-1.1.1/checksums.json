@@ -10,7 +10,7 @@
   "manifests/init.pp": "eb3a3230f30a51cd32ed92d8de44c98a",
   "manifests/params.pp": "f4c9cf88643e7e177cad4f21963a3824",
   "manifests/user.pp": "79021e6424bdb975cdd38a9e3e5ec59c",
-  "metadata.json": "fce657bb9c1fffcee4cd27edda38f362",
+  "metadata.json": "20d7b148908ec5d54b7ac667012ed943",
   "spec/classes/init_spec.rb": "12ca1a759ac47bb2d17d5958363759df",
   "spec/spec_helper.rb": "a55d1e6483344f8ec6963fcb2c220372",
   "templates/cron.erb": "33a5cde754015abacbc34c0230e34007",
