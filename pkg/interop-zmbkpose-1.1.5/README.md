@@ -1,34 +1,39 @@
-# zmbkpose
+# Zimbra backup automation with Puppet (zmbkpose)
 
 #### Table of Contents
 
 1. [Overview](#overview)
 2. [Module Description - What the module does and why it is useful](#module-description)
 3. [Setup - The basics of getting started with zmbkpose](#setup)
-    * [Como utilizar](#como-utilizar)
-    * [Classe zmbkpose](#arquivo-init.pp-classe)
-    * [Classe zmbkpose::user](#Arquivo-user.pp-classe)
-    * [Classe zmbkpose::dir](#Arquivo-dir.pp-classe)
-    * [Classe zmbkpose::conf](#Arquivo-conf.pp-classe)
-    * [Classe zmbkpose::cron](#Arquivo-cron.pp-classe)
+    * [How to use](#como-utilizar)
+    * [Class zmbkpose](#arquivo-init.pp-classe)
+    * [Class zmbkpose::user](#Arquivo-user.pp-classe)
+    * [Class zmbkpose::dir](#Arquivo-dir.pp-classe)
+    * [Class zmbkpose::conf](#Arquivo-conf.pp-classe)
+    * [Class zmbkpose::cron](#Arquivo-cron.pp-classe)
 5. [Limitations - OS compatibility, etc.](#limitations)
 6. [Development - Guide for contributing to the module](#development)
 
 ## Overview
 
-O modulo do puppet intertop-zmbkpose, tem como objetivo configurar de forma automatica os backups do Zimbra via zmbkpose.
+The puppet intertop-zmbkpose module,  aim to deliver automatic backups to Zimbra via zmbkpose.
 
-## Module Description
+## Module Description and Requirements
 
-O modulo zmbkpose do puppet, tem como pré-requisito o servidor zimbra.\n
-Os seguintes recursos do puppet são utilizados pelo o módulo (templates, manifests, files, lib - facter do modulo).
+The puppet zmbkpose module requires a Zimbra Server version 8.7.
 
-Toda a configuração do zmbkpose é realizada através do modulos, segue algumas configurações realizadas:
-* Configura o caminho do binario zmbkpose;
-* Configura o caminho do conf zmbkpose.conf;
-* Configura a crontab do Zimbra.
+The following puppet resources are used by this module: 
+* templates
+* manifests
+* files
+* lib - facter do modulo
 
-O modulo possui as seguintes classes, que serão descritas abaixo:
+All the config of zmbkpose is made through these modules, some configs made are:
+* Config the way of binary zmbkpose;
+* Config the way of conf zmbkpose.conf;
+* Config a crontab of Zimbra.
+
+The module has the following classes:
 * zmbkpose;
 * zmbkpose::dir;
 * zmbkpose::params;
@@ -38,15 +43,13 @@ O modulo possui as seguintes classes, que serão descritas abaixo:
 
 ## Setup
 
-### Como utilizar
+### How to use
 
-A classe zmbkpose importa todas as demais classes necessárias, sendo necessário apenas alterar as variaveis caso necessário.
+zmbkpose class import all other required classes, you just need to change the variables if needed.
 
+### File init.pp class: **zmbkpose**
 
-### Arquivo init.pp classe: **zmbkpose**
-
-Herda os recursos da classe zmbkpose::params.
-
+Inherited resources from class zmbkpose::params.
 
         class { 'zmbkpose::user': } ->
         class { 'zmbkpose::dir': } ->
@@ -54,49 +57,52 @@ Herda os recursos da classe zmbkpose::params.
         class { 'zmbkpose::cron': }
 
 
-### Arquivo user.pp classe: **zmbkpose::user**
+### File user.pp class: **zmbkpose::user**
 
-A classe user faz a verificação da existência do usuário/grupo do Zimbra.
-
-
-## Arquivo dir.pp classe: **zmbkpose::dir**
-
-A classe dir é responsável por criar todos os diretórios utilizados pelo o script zmbkpose.
-
-Exemplo de diretórios a serem criados:
-* /etc/zmbkpose -> diretório onde estará o conf;
-* /usr/local/bin/zmbkpose -> diretório de onde ficará o binário - script
-* /opt/backup -> diretório de onde estará os backups
-* /opt/backup/log -> diretório onde conterá os logs do backup
-
-##  Arquivo conf.pp classe: **zmbkpose::conf**
-
-Configura o script zmbkpose e o conf zmbkpose.conf.
-
-No script zmbkpose é configurado apenas o caminho de onde está o arquivo zmbkpose.conf.  Portanto, o script zmbkpose é um template no puppet.
-
-O arquivo de configuração zmbkpose.conf, é um template no puppet.  No conf todas as opções são tratadas comos variáveis e estão em params.pp
-A senha do usuário zimbra, é coletada automaticamente pelo o puppet e repassada via facter para o template.
+The User class check the Zimbra user/group existence.
 
 
-##  Arquivo cron.pp classe: **zmbkpose::cron**
-A classe cron, cria os agendamentos de backup full, incremental e a remoção dos backups antigos no usuário do Zimbra.
+## File dir.pp class: **zmbkpose::dir**
 
-Todo o horário na cron, são variáveis gerenciadas pela a classe params.pp.  Essas variáveis estão como array, conforme o exampleo abaixo:
+The dir class is responsible for create all directories used by zmbkpose script.
+
+Example of directories to be created:
+* /etc/zmbkpose -> directory of conf;
+* /usr/local/bin/zmbkpose -> directory of binary - script
+* /opt/backup -> directory of backups
+* /opt/backup/log -> directory of backup logs
+
+##  File conf.pp classe: **zmbkpose::conf**
+
+Config script zmbkpose and conf zmbkpose.conf.
+
+In the zmbkpose script you just configure the way to zmbkpose.conf.  By this way zmbkpose script is a puppet template.
+
+In the conf all options are treated like variables, they are in the params.pp
+
+The zimbra user password is collected automatically by puppet and transmitted via facter to template.
+
+
+##  File cron.pp class: **zmbkpose::cron**
+
+The cron class create full and incremental backup schedules as well as removal of old backups of Zimbra users.
+
+All the cron schedules are managed through the class params.pp.  These variables are stored like array, as follow:
+
 $backupFull = {'min' => '3', 'hora' => '2', 'monthday' => '1', 'month' => '2', 'weekday' => '2'  }
-
 
 
 ## Limitations
 
-O módulo foi testado no CentOS 7 com o Zimbra 8.7.
-
+The module has been tested in CentOS 7 running Zimbra 8.7.
 
 ## Development
 
-O módulo foi desenvolvido pela a empresa InterOp - www.interop.com.br, com os seguintes colaboradores:
-Rafael Tomelin
-Rudnei Bertol
+The module has been created by InterOp - www.interop.com.br, by the following contributors:
+
+* Rafael Tomelin, Team Leader at Interop, Linux Specialist, RHCE Certified, LPIC-3-Core
+* Rudnei Bertol, Linux Analyst at Interop, Linux Specialist, RHCE and Expertise in Configuration Management Certified
+* Cleverson Santos, Sr.IT Consultant at Interop, ITSM delivering value to Interop customers.
 
 ## Release Notes/Contributors/Etc **Optional**
 
