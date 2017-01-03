@@ -5,30 +5,34 @@
 1. [Overview](#overview)
 2. [Module Description - What the module does and why it is useful](#module-description)
 3. [Setup - The basics of getting started with zmbkpose](#setup)
-    * [Como utilizar](#como-utilizar)
-    * [Classe zmbkpose](#arquivo-init.pp-classe)
-    * [Classe zmbkpose::user](#Arquivo-user.pp-classe)
-    * [Classe zmbkpose::dir](#Arquivo-dir.pp-classe)
-    * [Classe zmbkpose::conf](#Arquivo-conf.pp-classe)
-    * [Classe zmbkpose::cron](#Arquivo-cron.pp-classe)
+    * [How to use](#como-utilizar)
+    * [Class zmbkpose](#arquivo-init.pp-classe)
+    * [Class zmbkpose::user](#Arquivo-user.pp-classe)
+    * [Class zmbkpose::dir](#Arquivo-dir.pp-classe)
+    * [Class zmbkpose::conf](#Arquivo-conf.pp-classe)
+    * [Class zmbkpose::cron](#Arquivo-cron.pp-classe)
 5. [Limitations - OS compatibility, etc.](#limitations)
 6. [Development - Guide for contributing to the module](#development)
 
 ## Overview
 
-O modulo do puppet intertop-zmbkpose, tem como objetivo configurar de forma automatica os backups do Zimbra via zmbkpose.
+The puppet intertop-zmbkpose module,  aim to deliver automatic backups to Zimbra via zmbkpose.
 
-## Module Description
+## Module Description and Requirements
 
-O modulo zmbkpose do puppet, tem como pré-requisito o servidor zimbra.\n
-Os seguintes recursos do puppet são utilizados pelo o módulo (templates, manifests, files, lib - facter do modulo).
+The puppet zmbkpose module requires a Zimbra Server version 8.7.\n
+The following puppet resources are used by this module: 
+* templates
+* manifests
+* files
+* lib - facter do modulo
 
-Toda a configuração do zmbkpose é realizada através do modulos, segue algumas configurações realizadas:
-* Configura o caminho do binario zmbkpose;
-* Configura o caminho do conf zmbkpose.conf;
-* Configura a crontab do Zimbra.
+All the config of zmbkpose is made through these modules, some configs made are:
+* Config the way of binary zmbkpose;
+* Config the way of conf zmbkpose.conf;
+* Config a crontab of Zimbra.
 
-O modulo possui as seguintes classes, que serão descritas abaixo:
+The module has the following classes:
 * zmbkpose;
 * zmbkpose::dir;
 * zmbkpose::params;
@@ -38,14 +42,14 @@ O modulo possui as seguintes classes, que serão descritas abaixo:
 
 ## Setup
 
-### Como utilizar
+### How to use
 
-A classe zmbkpose importa todas as demais classes necessárias, sendo necessário apenas alterar as variaveis caso necessário.
+zmbkpose class import the rest of other required classes, you just need to change the variables if needed.
 
 
-### Arquivo init.pp classe: **zmbkpose**
+### File init.pp class: **zmbkpose**
 
-Herda os recursos da classe zmbkpose::params.
+Inherited resources from class zmbkpose::params.
 
 
         class { 'zmbkpose::user': } ->
@@ -54,12 +58,12 @@ Herda os recursos da classe zmbkpose::params.
         class { 'zmbkpose::cron': }
 
 
-### Arquivo user.pp classe: **zmbkpose::user**
+### File user.pp class: **zmbkpose::user**
 
-A classe user faz a verificação da existência do usuário/grupo do Zimbra.
+The User class check the Zimbra user/group existence.
 
 
-## Arquivo dir.pp classe: **zmbkpose::dir**
+## File dir.pp class: **zmbkpose::dir**
 
 A classe dir é responsável por criar todos os diretórios utilizados pelo o script zmbkpose.
 
