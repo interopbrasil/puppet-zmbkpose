@@ -45,7 +45,7 @@ The module has the following classes:
 
 ### How to use
 
-zmbkpose class import the rest of other required classes, you just need to change the variables if needed.
+zmbkpose class import all other required classes, you just need to change the variables if needed.
 
 
 ### File init.pp class: **zmbkpose**
