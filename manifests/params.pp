@@ -10,9 +10,9 @@ class zmbkpose::params {
   $logfile = "${dirlog}/backup.log"
   $adminuser = 'admin'
   $adminpass = 'senhadoadmin'
-  $ldapmasterserver = $::ipaddress
+  $ldapmasterserver = "${::ipaddress}"
   $ldapzimbradn = 'uid=zimbra,cn=admins,cn=zimbra'
-  $ldapzimbrapass = $::ldap_root_password
+  $ldapzimbrapass = "${::ldap_root_password}"
   $email_notify = 'suporte@dominio.com'
   $parallel_support = '1'
   $max_parallel_process = '3'
@@ -42,9 +42,9 @@ class zmbkpose::params {
   }
 
   # Different path and package definitions
-  case $::operatingsystem {
+  case "${::operatingsystem}" {
     'CentOS' : {
-      case $::operatingsystemmajrelease {
+      case "${::operatingsystemmajrelease}" {
         '7'     : {
           $crondir = '/etc/cron.d'
           $cronconf = "${crondir}/zimbra"
