@@ -65,42 +65,46 @@ The User class check the Zimbra user/group existence.
 
 ## File dir.pp class: **zmbkpose::dir**
 
-A classe dir é responsável por criar todos os diretórios utilizados pelo o script zmbkpose.
+The dir class is responsible for create all directories used by zmbkpose script.
 
-Exemplo de diretórios a serem criados:
-* /etc/zmbkpose -> diretório onde estará o conf;
-* /usr/local/bin/zmbkpose -> diretório de onde ficará o binário - script
-* /opt/backup -> diretório de onde estará os backups
-* /opt/backup/log -> diretório onde conterá os logs do backup
+Example of directories to be created:
+* /etc/zmbkpose -> directory of conf;
+* /usr/local/bin/zmbkpose -> directory of binary - script
+* /opt/backup -> directory of backups
+* /opt/backup/log -> directory of backup logs
 
-##  Arquivo conf.pp classe: **zmbkpose::conf**
+##  File conf.pp classe: **zmbkpose::conf**
 
-Configura o script zmbkpose e o conf zmbkpose.conf.
+Config script zmbkpose and conf zmbkpose.conf.
 
-No script zmbkpose é configurado apenas o caminho de onde está o arquivo zmbkpose.conf.  Portanto, o script zmbkpose é um template no puppet.
+In the zmbkpose script you just configure the way to zmbkpose.conf.  By this way zmbkpose script is a puppet template.
 
-O arquivo de configuração zmbkpose.conf, é um template no puppet.  No conf todas as opções são tratadas comos variáveis e estão em params.pp
-A senha do usuário zimbra, é coletada automaticamente pelo o puppet e repassada via facter para o template.
+In the conf all options are treated like variables, they are in the params.pp
+
+The zimbra user password is collected automatically by puppet and transmitted via facter to template.
 
 
-##  Arquivo cron.pp classe: **zmbkpose::cron**
-A classe cron, cria os agendamentos de backup full, incremental e a remoção dos backups antigos no usuário do Zimbra.
+##  File cron.pp class: **zmbkpose::cron**
 
-Todo o horário na cron, são variáveis gerenciadas pela a classe params.pp.  Essas variáveis estão como array, conforme o exampleo abaixo:
+The cron class create full and incremental backup schedules as well as removal of old backups of Zimbra users.
+
+All the cron schedules are managed through the class params.pp.  These variables are stored like array, as follow:
+
 $backupFull = {'min' => '3', 'hora' => '2', 'monthday' => '1', 'month' => '2', 'weekday' => '2'  }
-
 
 
 ## Limitations
 
-O módulo foi testado no CentOS 7 com o Zimbra 8.7.
+The module has been tested in CentOS 7 running Zimbra 8.7.
 
 
 ## Development
 
-O módulo foi desenvolvido pela a empresa InterOp - www.interop.com.br, com os seguintes colaboradores:
-Rafael Tomelin
-Rudnei Bertol
+The module has been created by InterOp - www.interop.com.br, by the following contributors:
+
+Rafael Tomelin, Team Leader at Interop, Linux Specialist, RHCE Certified, LPIC-3-Core
+Rudnei Bertol, Linux Analyst at Interop, Linux Specialist, RHCE and Expertise in Configuration Management Certified
+Cleverson Santos, Sr.IT Consultant at Interop, ITSM delivering value to Interop customers.
 
 ## Release Notes/Contributors/Etc **Optional**
 
