@@ -1,4 +1,4 @@
-# zmbkpose
+# Zimbra backup automation with Puppet (zmbkpose)
 
 #### Table of Contents
 
