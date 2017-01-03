@@ -47,11 +47,9 @@ The module has the following classes:
 
 zmbkpose class import all other required classes, you just need to change the variables if needed.
 
-
 ### File init.pp class: **zmbkpose**
 
 Inherited resources from class zmbkpose::params.
-
 
         class { 'zmbkpose::user': } ->
         class { 'zmbkpose::dir': } ->
