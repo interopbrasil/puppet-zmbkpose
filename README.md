@@ -20,7 +20,8 @@ The puppet intertop-zmbkpose module,  aim to deliver automatic backups to Zimbra
 
 ## Module Description and Requirements
 
-The puppet zmbkpose module requires a Zimbra Server version 8.7.\n
+The puppet zmbkpose module requires a Zimbra Server version 8.7.
+
 The following puppet resources are used by this module: 
 * templates
 * manifests
