@@ -100,9 +100,9 @@ The module has been tested in CentOS 7 running Zimbra 8.7.
 
 The module has been created by InterOp - www.interop.com.br, by the following contributors:
 
-Rafael Tomelin, Team Leader at Interop, Linux Specialist, RHCE Certified, LPIC-3-Core
-Rudnei Bertol, Linux Analyst at Interop, Linux Specialist, RHCE and Expertise in Configuration Management Certified
-Cleverson Santos, Sr.IT Consultant at Interop, ITSM delivering value to Interop customers.
+* Rafael Tomelin, Team Leader at Interop, Linux Specialist, RHCE Certified, LPIC-3-Core
+* Rudnei Bertol, Linux Analyst at Interop, Linux Specialist, RHCE and Expertise in Configuration Management Certified
+* Cleverson Santos, Sr.IT Consultant at Interop, ITSM delivering value to Interop customers.
 
 ## Release Notes/Contributors/Etc **Optional**
 
