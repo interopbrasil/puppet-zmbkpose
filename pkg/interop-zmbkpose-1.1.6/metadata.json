@@ -1,0 +1,47 @@
+{
+  "name": "interop-zmbkpose",
+  "version": "1.1.6",
+  "author": "interop",
+  "summary": "Backup zimbra.",
+  "license": "Apache-2.0",
+  "source": "git://github.com/interopbrasil/puppet-zmbkpose.git",
+  "project_page": "https://github.com/interopbrasil/puppet-zmbkpose",
+  "issues_url": "https://github.com/interopbrasil/puppet-zmbkpose/issues",
+  "tags": [
+    "zimbra",
+    "zmbkpose",
+    "backup"
+  ],
+  "data_provider": null,
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 3.0.0 < 5.0.0"
+    }
+  ],
+  "description": "Backup zimbra via zmbkpose",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_range": ">= 1.0.0"
+    }
+  ]
+}

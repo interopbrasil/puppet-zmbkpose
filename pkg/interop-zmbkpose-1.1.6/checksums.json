@@ -1,0 +1,19 @@
+{
+  "README.md": "dd7e82b5a2cc1491f9ed0a220a8d7445",
+  "Rakefile": "20b80e526e351a74df2001f504e756d2",
+  "files/conf/zmbkpose.conf": "9a1ab2c30b0d0b304d2a2bd18410c198",
+  "lib/facter/ldap_root_password.rb": "c43bf90945d4a2a9bfb4e2ca3b12d64a",
+  "manifests/conf.pp": "cf16e2e9d6291d20d6bcf00b0c1e75e3",
+  "manifests/cron.pp": "6d1054439eed6fff35a9682b3177772c",
+  "manifests/dir.pp": "26fcd9b1ebb3bdd2b6538e35d5f17287",
+  "manifests/init.pp": "3169549d545f9226b78cc58a94602219",
+  "manifests/params.pp": "29dd672ca3d29fde2aefd77f3c14b113",
+  "manifests/user.pp": "0ba46a4d05d64be227556f38aeb38a8a",
+  "metadata.json": "4ad107d635d07a47d5b43c6ad0aaa201",
+  "spec/classes/init_spec.rb": "12ca1a759ac47bb2d17d5958363759df",
+  "spec/spec_helper.rb": "a55d1e6483344f8ec6963fcb2c220372",
+  "templates/cron.erb": "2973cff8abe633cb221f1fb0027ee6c6",
+  "templates/zmbkpose.conf.erb": "952628483027324930851a1c57497ddd",
+  "templates/zmbkpose.erb": "67e4473770e672332ce5daaccc37ac88",
+  "tests/init.pp": "36f0a19b2c62b701cf7b6d30d3339f1e"
+}
