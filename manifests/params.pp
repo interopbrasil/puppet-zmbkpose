@@ -49,6 +49,10 @@ class zmbkpose::params {
           $crondir = '/etc/cron.d'
           $cronconf = "${crondir}/zimbra"
         }
+        default : {
+          notice("\"${module_name}\" provides no config directory and package default values for OS version release \"${::operatingsystemmajrelease}\""
+          )
+        }
       }
     }
     default  : {
