@@ -98,7 +98,6 @@ $backupFull = {'min' => '3', 'hora' => '2', 'monthday' => '1', 'month' => '2', '
 
 The module has been tested in CentOS 7 running Zimbra 8.7.
 
-
 ## Development
 
 The module has been created by InterOp - www.interop.com.br, by the following contributors:
