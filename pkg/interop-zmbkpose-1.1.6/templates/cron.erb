@@ -1,0 +1,13 @@
+# ZIMBRASTART -- INICIO DO BACKUP VIA ZMBKPOSE
+#
+#Backup Full
+<%= @cronbackupfull %> <%= @binzmbkpose %> -f >> <%= @logfile %> 2>&1
+
+##Backup Incremental
+<%= @cronbackupincr %> <%= @binzmbkpose %> -i >> <%= @logfile %> 2>&1
+
+##Apagar Backup Antigo
+<%= @cronremovebackup %> <%= @binzmbkpose %> -d <%= @binzmbkpose %> >> <%= @logfile %> 2>&1
+
+# BACKUP BEGIN
+# BACKUP END
